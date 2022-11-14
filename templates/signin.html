@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    <style>
+        
+        #img{
+            height: 300px;
+            width: 1485px;
+           margin-top: 50px;
+           margin-left: 10px;
+        }
+        
+        h2 {
+            background-color: rgb(113, 125, 135);
+            text-align: center;
+            color: white;
+        }
+
+        #sign {
+            margin-top: 15px;
+        }
+
+        div {
+            background-color: bisque;
+            width: fit-content;
+            margin-left: 600px;
+            margin-top: 45px;
+            width: 300px;
+            border-radius: 13px;
+            height: 200px;
+        }
+
+        form {
+
+            margin: 5px;
+        }
+
+        form input {
+            margin: 5px;
+        }
+
+        #submit {
+            margin-left: 100px;
+        }
+
+        #username {
+            margin-top: 50px;
+            ;
+
+        }
+
+        form label,
+        input {
+            margin-left: 30px;
+        }
+
+        #submit {
+            margin-top: 15px;
+            margin-left: 120px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Online Voting System</h2>
+    
+    <h2 id="sign">Sign In</h2>
+    <div>
+        <form action="/signin" method="post">
+
+            {% if use is none %}
+    <ul>
+        {% for message in messages %}
+	<li>
+	      {{ message }}
+            {% endfor %}
+	</li>
+</ul>
+{% endif %}
+
+            {% csrf_token %}
+            <label for="username">Username:</label>
+            <input type="text" name="username" id="username" placeholder="Username.."><br>
+
+            <label for="pass1">Password:</label>
+            <input type="password" name="pass1" id="password1" placeholder="Password.."><br>
+
+            <button type="submit" id="submit">Sign In</button>
+        </form>
+    </div>
+    <img id="img" src="https://assets.tvo.org/prod/s3fs-public/styles/full_width_1280/public/article-thumbnails/vote.JPG?LvLZFJVZfJss6UtBQmVGZdrjWYB86Oe8&itok=2D1oeTYg"
+        alt="Suppose to be an image:">
+</body>
+
+</html>

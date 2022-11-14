@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OVS</title>
+    <style>
+        h2{
+            color: white;
+            text-align: center;
+            background-color: rgb(149, 144, 144);
+        }
+
+        div{
+            text-align: center;
+            background-color: rgb(113, 125, 135);
+            margin-top: 10px;
+            height: 30px;
+        }
+        div button{
+            margin-top: 5px;
+            color: rgb(249, 240, 240);
+            
+        }
+
+    </style>
+
+</head>
+<body>
+    <h2>Online Voting System!</h2>
+
+    <img
+      src="https://source.unsplash.com/1500x300/?voter/"
+      alt="Suppose to be an image:"
+    />
+
+    <div>
+    {% comment %} {% if user.is_authenticated %}
+    <h3>Welcome {{fname}}</h3> {% endcomment %}
+    {% comment %} <h3>You are successfully logged in!</h3> {% endcomment %}
+    
+
+    {% comment %} {% else %} {% endcomment %}
+    {% comment %} <h3>you are not logged in</h3> {% endcomment %}
+    <button  type="submit" id="sign"> <a href="signup"> Sign Up</a></button>
+    <button type="submit" id="signin"> <a href="signin"> Sign In</a></button>
+    <button type="submit" id="logout"> <a href="logout"> Sign Out</a></button>
+    
+    {% comment %} {% endif %} {% endcomment %}
+    </div>
+
+    <div id="dbox">
+        
+    <p>
+        Welcome to Online voting system: <br>
+        1.If you are a new user have to create your account by sign up.<br>
+        2.If you have already created your account then sign in. <br>
+        3. After sign in you will be able to vote.<br>
+    </p>
+    </div>
+</body>
+</html>

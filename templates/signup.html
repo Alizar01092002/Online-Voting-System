@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+
+    <style>
+        #sign {
+            text-align: center;
+            background-color: rgb(22, 31, 112);
+            color: white;
+            margin-top: 50px;
+
+        }
+
+        #heading {
+            background-color: rgb(149, 144, 144);
+            text-align: center;
+            color: white;
+        }
+        #form{
+            text-align: center;
+        }
+        body{
+            background-image:url("https://electionbuddy.com/wp-content/uploads/2022/01/Voting-image-6-scaled.jpg" );
+            background-repeat: no-repeat;
+            /* width: 900px;
+            height: 1600px; */
+            background-position: center;
+            height: 100%;
+            min-width: 1024px;
+            background-attachment: f;
+            /* height: 100%; */
+        }
+        div{
+            background-color: rgb(33, 27, 27);
+            width: fit-content;
+            margin-left: 600px;
+            margin-top: 150px;
+            border-radius: 12px;
+        
+        }
+
+        form label{
+            color: white;
+            margin: 5px;
+        }
+
+        form input{
+            margin: 5px;
+        }
+
+        #submit{
+            margin: 5px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h2 id="heading">Online Voting System</h2>
+    <h2 id="sign">Sign Up</h2>
+
+    <div id="form"> 
+    <form action="/signup" method="post">
+
+        {% csrf_token %}
+        <label for="username">Username:</label>
+        <input type="text" name="username" id="username" placeholder="Username.."><br>
+
+        <label for="fname">First Name:</label>
+        <input type="text" name="fname" id="fname" placeholder="First name.."><br>
+
+        <label for="lname">Last Name:</label>
+        <input type="text" name="lname" id="lname" placeholder="Last name.."><br>
+
+        <label for="email">Email:</label>
+        <input type="text" name="email" id="email" placeholder="Email.."><br>
+
+        <label for="pass1">Password:</label>
+        <input type="password" name="pass1" id="password1" placeholder="Password.."><br>
+
+        <label for="pass2">Conform Your Password:</label>
+        <input type="password" name="pass2" id="password2" placeholder="Agian password.."><br>
+
+        <button type="submit" id="submit">Submit
+        </button>
+    </form>
+    </div>  
+    <P>Please fill all the details carefully!</P> 
+</body>
+
+</html>
